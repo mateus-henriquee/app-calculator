@@ -1,20 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      App Calculator
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-input label="First Number" label-placement="floating" placeholder="Enter Your Number:" type="number" [(ngModel)]="number1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Second Number" label-placement="floating" placeholder="Enter Your Number:" type="number" [(ngModel)]="number2"></ion-input>
+  </ion-item>
+<br>
+
+  <ion-button expand="small" (click)="add()"> (+) </ion-button>
+  <ion-button expand="small" (click)="subtract()">  (-) </ion-button>
+  <ion-button expand="small" (click)="divide()"> (/) </ion-button>
+  <ion-button expand="small" (click)="multiply()"> (*) </ion-button>
+
+<br><br>
+  <ion-label> Soma: {{result}} </ion-label>
+
+
 </ion-content>
